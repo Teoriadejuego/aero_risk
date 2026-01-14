@@ -1,4 +1,5 @@
 # 📂 AERO-RISK: Datos y Código de Análisis (Simulación)
+[![DOI](https://zenodo.org/badge/1134353214.svg)](https://doi.org/10.5281/zenodo.18247133)
 
 Este repositorio contiene el conjunto de datos, el código de generación y el pipeline de análisis estadístico para el proyecto **AERO-RISK**. El estudio investiga el impacto de la práctica previa en la toma de decisiones bajo riesgo (aversión a la incertidumbre vs. aversión al riesgo) utilizando una tarea de lanzamiento de aviones de papel.
 
