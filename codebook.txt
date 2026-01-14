@@ -1,0 +1,61 @@
+================================================================================
+PROYECTO AERO-RISK: LIBRO DE CÓDIGOS (CODEBOOK)
+================================================================================
+
+TÍTULO DEL PROYECTO: AERO-RISK: The effect of practice on skill-based risk taking
+INVESTIGADOR PRINCIPAL: Antonio Alfonso
+FECHA DE GENERACIÓN: Enero 2026
+ARCHIVO ASOCIADO: aero_risk_128.csv
+FORMATO DE DATOS: Valores separados por comas (CSV)
+CODIFICACIÓN: UTF-8
+
+DESCRIPCIÓN DEL ESTUDIO:
+Este dataset contiene datos (simulados) de un experimento conductual diseñado 
+para medir la aversión al riesgo en una tarea de habilidad motora (lanzamiento 
+de aviones de papel). Se investiga si la reducción de incertidumbre mediante 
+práctica previa aumenta la asunción de riesgos.
+
+NÚMERO DE REGISTROS: 128
+VALORES PERDIDOS (MISSING VALUES): Ninguno (dataset completo)
+
+================================================================================
+DESCRIPCIÓN DE VARIABLES
+================================================================================
+
+1. id_participante
+   ----------------
+   - Descripción: Identificador único y anónimo asignado a cada sujeto experimental.
+   - Tipo de Dato: Cadena de texto (String).
+   - Formato: "P" seguido de tres dígitos (ej. P001, P026).
+   - Rango: P001 a P128.
+   - Nota: Garantiza el anonimato; no contiene información personal identificable (PII).
+
+2. grupo
+   ----------------
+   - Descripción: Condición experimental a la que fue asignado el participante de 
+     manera aleatoria (Randomized Controlled Trial).
+   - Tipo de Dato: Categórico (Nominal).
+   - Valores Posibles:
+     [1] "Control": El participante debió apostar una distancia sin haber lanzado 
+         el avión previamente.
+     [2] "Tratamiento": El participante pudo realizar 3 lanzamientos de práctica 
+         antes de decidir su apuesta.
+
+3. distancia_apuesta_cm
+   ----------------
+   - Descripción: La distancia objetivo elegida por el participante. Representa 
+     el nivel de riesgo asumido. Si el participante logra lanzar el avión más 
+     allá de esta distancia, gana el incentivo; si no, pierde todo.
+   - Tipo de Dato: Numérico (Entero).
+   - Unidad de Medida: Centímetros (cm).
+   - Rango Teórico: 0 a 1000 cm (0 a 10 metros).
+   - Rango Observado (en simulación): ~150 a ~600 cm.
+
+================================================================================
+NOTAS METODOLÓGICAS
+================================================================================
+Este archivo de datos específico (aero_risk_128.csv) contiene DATOS SINTÉTICOS 
+generados mediante script de Python (numpy.random) para propósitos de 
+demostración de flujo de trabajo reproducible.
+- Distribución subyacente Control: Normal(media=300, sd=60).
+- Distribución subyacente Tratamiento: Normal(media=420, sd=60).
